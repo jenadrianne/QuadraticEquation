@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<!-- Derrf Seitz -->
+<html>
+<head>
+<title>Quadratic Solver</title>
+<link href="Quadratic Solver.css" rel="stylesheet" type="text/css" />
+<script src="Quadratic Solver.js"></script>
+</head>
+
+<!--
+In the body tag, add an onload handler for the page.
+It must call the onLoadPage() function.
+-->
+<body onload="onLoadPage()">
+<!-- form used only to allow Enter key activated button: -->
+<form>
+
+<h3>Quadratic Solver</h3>
+
+<!--
+Add the HTML for an image of the quadratic equation in standard form.
+Use "quadratic equation.jpg" for its image.
+-->
+<img src="Images/quadratic equation.jpg">
+
+<br/><br/>
+
+<p class="section">Coefficents:</p>
+<table cellpadding="0" cellspacing="5">
+<tr>
+
+<td><label for="a">a: </label></td>
+<td>
+<input type="text" id="a" size="5" maxlength="5" />
+</td>
+<td class="separator">&nbsp;</td>
+
+<!--
+Add the HTML for the b and c input fields.
+Their id's must be "b" and "c" respectively.
+Each needs a non-breaking space td with class "separator" after it.
+-->
+<td><label for="a">b: </label></td>
+<td>
+<input type="text" id="b" size="5" maxlength="5" />
+</td>
+<td class="separator">&nbsp;</td>
+
+<td><label for="a">c: </label></td>
+<td>
+<input type="text" id="c" size="5" maxlength="5" />
+</td>
+<td class="separator">&nbsp;</td>
+
+</tr>
+</table>
+
+<!--
+In the button tag for the Solve button, add an onclick handler.
+It must call the solve() function and then return false.
+-->
+<!-- return false; is needed so the page does not reload. -->
+<button type="submit" id="submit" onclick="solve(); return false;">
+Solve
+</button>
+
+<!--
+In the button tag for the Reset button, add an onclick handler.
+It must call the reset() function.
+-->
+<button onclick="reset()">
+Reset
+</button>
+
+<br/><br/>
+
+<hr/>
+<p class="section">Discriminant:</p>
+
+<img src="Images/discriminant.jpg" />
+
+<p class="output" id="discriminant">
+</p>
+
+<!--
+Add the HTML for the Solutions output section.
+Model it after the Discriminant output section.
+Use "quadratic formula.jpg" for its image.
+Use "solutions" for the output paragraph id.
+-->
+
+<hr/>
+<p class="section">Solutions:</p>
+
+<img src="Images/quadratic formula.jpg" />
+
+<p class="output" id="solutions">
+</p>
+
+<hr/>
+
+</form>
+</body>
+
+</html>
